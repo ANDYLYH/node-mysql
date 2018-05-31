@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.inputBox {
+	width: 500px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.inputBox label {
+	display: inline-block;
+	height: 40px;
+	width: 64px;
+	line-height: 40px;
+	text-align: right;
+	font-size: 14px;
+	color: #666;
+}
+.inputBox input {
+	display: inline-block;
+	height: 36px;
+	width: 300px;
+	padding-left: 10px;
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+	font-size: 14px;
+	color: #333;
+}
+
+.confirmAdd {
+	display: block;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 35px;
+	width: 120px;
+	border: 0;
+	border-radius: 3px;
+	background-color: #155456;
+	color: #fff;
+	cursor: pointer;
+}
+
+.kayword {
+	height: 30px;
+	width: 200px;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+	padding-left: 10px;
+	font-size: 14px;
+	margin: 20px 0 0px 20px;
+	color: #333333;
+}
+
+.searchBtn {
+	height: 30px;
+	width: 100px;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+}
+
+table {
+	width: 800px;
+	border: 0;
+	border-width: 0;
+	margin: 20px;
+}
+
+table td,
+table th {
+	text-align: center;
+	height: 30px;
+	border: 1px solid #E1E1E1;
+}
+
+table span:hover {
+	color: #5678f8;
+	cursor: pointer;
+}
+table span{
+	margin: 0 5px;
+}
+.newA {
+	height: 30px;
+	width: 100px;
+	border: 1px solid #E1E1E1;
+	background-color: #FFFFFF;
+	border-radius: 3px;
+}

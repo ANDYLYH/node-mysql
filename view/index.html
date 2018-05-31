@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>服务器测试</title>
+		<link rel="stylesheet" href="../lib/layer/2.4/skin/layer.css" />
+		<link rel="stylesheet" href="index.css" />
+		<style>
+			.editBody{
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,.3);
+				display: none;
+			}
+			.editContent{
+				width: 400px;
+				height: 300px;
+				background-color: #FFFFFF;
+				border-radius: 5px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -200px;
+				margin-top: -150px;
+			}
+			.editContent_head{
+				height: 40px;
+				border-bottom: 1px solid #E1E1E1;
+				width: 100%;
+				line-height: 40px;
+				text-align: center;
+				font-size: 16px;
+				font-weight: 700;
+			}
+			.editBodyClose{
+				position: absolute;
+				height: 40px;
+				width: 40px;
+				right: 0;
+				top: 0;
+				line-height: 34px;
+				text-align: center;
+				font-size: 36px;
+				color: #666666;
+				cursor: pointer;
+			}
+			.editContentInput{
+				text-align: center;
+				margin: 20px 0 ;
+			}
+			.editContentInput label{
+				display: inline-block;
+				width: 60px;
+				text-align: right;
+			}
+			.editContentInput input{
+				height: 30px;
+				width: 260px;
+				border: 1px solid #E1E1E1;
+				outline: none;
+				padding-left: 5px;
+			}
+			.editContentInput button{
+				height: 30px;
+				width: 120px;
+				border: 1px solid #E1E1E1;
+				border-radius: 5px;
+				background-color: #FFFFFF;
+				outline: none;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!--新增-->
+		<h2 style="margin: 20px 0 20px 20px;">学生期末成绩记录：</h2>
+		<div class="inputBox">
+			<label>姓名：</label>
+			<input type="text" placeholder="请输入姓名" class="name" />
+		</div>
+		<div class="inputBox">
+			<label>数学：</label>
+			<input type="text" placeholder="请输入数学成绩" class="math" />
+		</div>
+		<div class="inputBox">
+			<label>英语：</label>
+			<input type="text" placeholder="请输入英语成绩" class="english" />
+		</div>
+		<button class="confirmAdd">添加数据</button>
+		<!--查-->
+		<h2 style="margin: 20px 0 0px 20px;">学生期末成绩列表：</h2>
+		<input type="text" placeholder="请输入关键词" class="kayword">
+		<button class="searchBtn">查询</button>
+		<button class="newA">刷新</button>
+		<!--列表-->
+		<table border="0" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>姓名</th>
+					<th>英语</th>
+					<th>数学</th>
+					<th width="100">操作</th>
+				</tr>
+			</thead>
+			<tbody class="tbody"></tbody>
+		</table>
+		
+	<div class="editBody">
+		<div class="editContent">
+			<div class="editContent_head">
+				信息修改
+				<span class="editBodyClose">&times;</span>
+			</div>
+			<div class="editContentInput">
+				<label>姓名：</label>
+				<input type="text" placeholder="请输入姓名" class="edit_name"/>
+			</div>
+			<div class="editContentInput">
+				<label>数学：</label>
+				<input type="text" placeholder="请输入数学成绩" class="edit_math" />
+			</div>
+			<div class="editContentInput">
+				<label>英语：</label>
+				<input type="text" placeholder="请输入英语成绩" class="edit_english" />
+			</div>
+			<div class="editContentInput">
+				<button class="edit_confirm">确定修改</button>
+			</div>
+		</div>
+	</div>
+	</body>
+	<script type="text/javascript" src="../lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../lib/layer/2.4/layer.js"></script>
+	<script type="text/javascript" src="index.js" ></script>
+</html>
