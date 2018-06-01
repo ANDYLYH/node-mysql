@@ -1,8 +1,6 @@
 var DaoBase = require('../util/DBUtil');//引入dbutil
-var commonHead = require('../config/requestHead.js');
 //查
 exports.search = function(req,res){
-	commonHead.use(res);
 	var _pageCurrent = Number(req.query.pageCurrent);
 	var _pageSize = Number(req.query.pageSize);
 	//查    分页查询
@@ -27,7 +25,6 @@ exports.search = function(req,res){
 }
 //增
 exports.add = function(req,res){
-	commonHead.use(res);
 	//查    分页查询
 	var sql ='insert into stone_tab (name,english,math) values ("'+req.query.name+'",'+ Number(req.query.english)+','+Number(req.query.math)+')';
 	DaoBase.executeUpdate(sql,[],function(err,result){
@@ -47,7 +44,6 @@ exports.add = function(req,res){
 }
 //删
 exports.del = function(req,res){
-	commonHead.use(res);
 	//查    分页查询
 	var sql ='delete from stone_tab where id="'+req.query.id+'"';
 	DaoBase.executeUpdate(sql,[],function(err,result){
@@ -67,7 +63,6 @@ exports.del = function(req,res){
 }
 //获取 通过id
 exports.get = function(req,res){
-	commonHead.use(res);
 	//查    分页查询
 	var sql ='select * from stone_tab where id="'+req.query.id+'"';
 	DaoBase.executeUpdate(sql,[],function(err,result){
@@ -86,7 +81,6 @@ exports.get = function(req,res){
 }
 //更新
 exports.update = function(req,res){
-	commonHead.use(res);
 	//查    分页查询
 	var sql ='update stone_tab set name="'+req.query.name+'", math='+req.query.math+' ,english='+req.query.english+' where id='+req.query.id;
 	DaoBase.executeUpdate(sql,[],function(err,result){
